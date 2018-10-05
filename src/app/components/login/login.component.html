@@ -1,0 +1,13 @@
+<alert *ngIf="messageType !== ''" [type]="messageType">
+  {{message}}
+</alert>
+<form [formGroup]="form" (ngSubmit)="login()">
+  <div style="text-align: center;">
+    <h1>STOCK MANAGER</h1>
+  </div>
+  <input class="form-control" type="text" placeholder="Usuario" formControlName="username">
+  <input class="form-control" type="password" placeholder="Contraseña" formControlName="password">
+  <button type="submit" class="btn btn-primary">
+    Iniciar sesion
+  </button>
+</form>

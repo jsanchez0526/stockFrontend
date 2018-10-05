@@ -1,0 +1,27 @@
+<div>
+  <tabset>
+    <tab heading="Productos" (select)="setOption(0)"></tab>
+    <tab heading="Stock" (select)="setOption(1)"></tab>
+    <tab heading="Facturacion" (select)="setOption(2)"></tab>
+    <tab heading="Informes" (select)="setOption(3)"></tab>
+  </tabset>
+</div>
+<div [ngSwitch]="option">
+  <ng-template [ngSwitchCase]="0">
+    <app-product></app-product>
+  </ng-template>
+  <ng-template [ngSwitchCase]="1">
+    <app-stock-stock></app-stock-stock>
+  </ng-template>
+  <ng-template [ngSwitchCase]="2">
+    <app-billing></app-billing>
+  </ng-template>
+  <ng-template [ngSwitchCase]="3">
+    <app-report></app-report>
+  </ng-template>
+  <ng-template ngSwitchDefault>
+
+  </ng-template>
+</div>
+
+
